@@ -10,9 +10,9 @@ It is mandatory to answer these questions at least by two reviewers (one tester 
 Testers shall focus on script and ims test case related reviews, while developers shall focus on the pdf report.
 Remarking review tool questions is mandatory even if fulfilled!
 Otherwise:
-	* if a question is not relevant (specially from process-side), then please remark it.
-	* if a question is okay, please accept and remark may be added.
-	* if a question is not okay, please leave it empty, and remark is mandatory.
+* if a question is not relevant (specially from process-side), then please remark it.
+* if a question is okay, please accept and remark may be added.
+* if a question is not okay, please leave it empty, and remark is mandatory.
 
 
 ## Checklist
@@ -62,15 +62,6 @@ stays flexible, relevant and up to date.
 - [ ] Is a realistic system usage (including worst case scenario) considered?
 	Remark:
 	
-- [ ] Are the test input data understandable and easy to find?
-	Remark:
-	
-- [ ] Are the test configuration parameters understandable and easy to find?
-	Remark:
-	
-- [ ] Will you be able to modify the script to fit changing requirements or other project needs (regarding the 2 questions above)? 
-	Remark:
-	
 - [ ] Do variables and methods have reasonable, descriptive names to understand the purpose easily even without comments?
 	Remark:
 	
@@ -80,7 +71,18 @@ stays flexible, relevant and up to date.
 - [ ] Is the script sufficiently modular?
 	Remark:
 	
-- [ ] Are the defined test methods (e.g equivalence partitioning aand boundary analysis) used consistently?
+- [ ] Are the defined test methods (e.g equivalence partitioning, boundary analysis) used consistently?
+	Remark:
+	
+### Input file
+
+- [ ] Are the test input data understandable and easy to find?
+	Remark:
+	
+- [ ] Are the test configuration parameters understandable and easy to find?
+	Remark:
+	
+- [ ] Will you be able to modify the script to fit changing requirements or other project needs (regarding the 2 questions above)? 
 	Remark:
 	
 ### Pdf report
@@ -123,8 +125,6 @@ stays flexible, relevant and up to date.
 
 ### Review tool questions
 
-#### Requirement test specification
-
  - [ ] 268481: The test environment has to be defined and described. It has to be compliant with the demands of ISO 26262 (chapter 6).
 	*Explanation: This means the SW Unit test has to be executed on a (simulated/real) target CPU environment under usage of the target compiler and the target compiler option set and settings. Acceptable for SW Unit testing is e.g. a direct link of Tessy to the HW target or a simulated execution on the compiler provided CPU simulator (e.g. if provided by the Windriver Workbench). Running executables on the simulator during Algo X-Checks is an acceptable substitute in addition to unit tests on a x86 platform if the tests achieve C1 coverage. It is not acceptable to have only code execution with GNU GCC compiler which executes only on x86.*
 	**Remark:**
@@ -140,12 +140,11 @@ stays flexible, relevant and up to date.
 	**Remark:**
 	
  - [ ] 268143: Some test cases have to be defined to stress the functionality to at least the level of maximum realistic system usage.
-	**Remark:**
 	*Explanation: Worst case scenarios:
-	  - Inject simultaneously Front+Side+Rear crashes and measure runtime usage.
-	  - Communication: perform test cases for overloaded bus.
-	  - Satellite: full data communication between satellites and ECU at undervoltage/overvoltage thresholds.*
-	
+	  a) Inject simultaneously Front+Side+Rear crashes and measure runtime usage.
+	  b) Communication: perform test cases for overloaded bus.
+	  c) Satellite: full data communication between satellites and ECU at undervoltage/overvoltage thresholds.*
+	**Remark:**
 	
  - [ ] 268484: Sufficient tests have to be specified to verify that all variables are initialized correctly after warm reset and cold reset.
 	**Remark:**
@@ -160,13 +159,13 @@ stays flexible, relevant and up to date.
  - [ ] 268223: For 3rd party SW acceptance tests have to be defined.
 	**Remark:**
 	
- - [ ] 268406: The contents of the test specification have to cover all aspects according to the related test method e.g. equivalence partitioning and boundary analysis| C1 coverage etc.
+ - [ ] 268406: The contents of the test specification have to cover all aspects according to the related test method e.g. equivalence partitioning and boundary analysis, C1 coverage etc.
 	**Remark:**
 	
  - [ ] 268407: The test end criteria and completeness criteria for the test have to be specified.
-	*Explanation: The test completeness criteria shall be described for every sample phase in the specific test activity (e.g. SW requirements test) for each test set (tested function) and for each test case (expected results). *
+	*Explanation: The test completeness criteria shall be described for every sample phase in the specific test activity (e.g. SW requirements test) for each test set (tested function) and for each test case (expected results).*
 	**Remark:**
 	
  - [ ] 270172: Document here all additional findings which are not covered by any question in this review.
-	*Explanation: e.g. project/product specific findings which are not covered by the checklist*
+	*Explanation: e.g. project/product specific findings which are not covered by the checklist.*
 	**Remark:**

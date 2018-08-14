@@ -8,9 +8,11 @@ Pylint result of the package containing the new script(s) must to be uploaded.
 
 It is mandatory to answer these questions at least by two reviewers (one tester and one developer) otherwise merge back to master must not be executed.
 Testers shall focus on script and ims test case related reviews, while developers shall focus on the pdf report.
-If a question is not relevant (specially from process-side), then please remark it.
-If a question is okay, please accept and remark may be added.
-If a question is not okay, please leave it empty, and remark is mandatory.
+Remarking review tool questions is mandatory even if fulfilled!
+Otherwise:
+	* if a question is not relevant (specially from process-side), then please remark it.
+	* if a question is okay, please accept and remark may be added.
+	* if a question is not okay, please leave it empty, and remark is mandatory.
 
 
 ## Checklist
@@ -20,14 +22,9 @@ best accepted guidelines should be derived from the *experience* of the code
 reviewers *who use these guidelines*. This will ensure that the checklist
 stays flexible, relevant and up to date.
 
-Items on the checklist should be phrased in terms of questions that the
-reviewer should ask him or herself about the code under review.
-
-Process mandatory questions are also must be filled in.
-
 ### Script
 
-- [ ] Is pylint rate for package higher than 9.0?
+- [ ] Is pylint rate for package higher than 9.5?
 	Remark:
 	
 - [ ] Is the script easy to read and understand?
@@ -129,46 +126,47 @@ Process mandatory questions are also must be filled in.
 #### Requirement test specification
 
  - [ ] 268481: The test environment has to be defined and described. It has to be compliant with the demands of ISO 26262 (chapter 6).
-	Explanation: This means the SW Unit test has to be executed on a (simulated/real) target CPU environment under usage of the target compiler and the target compiler option set and settings. Acceptable for SW Unit testing is e.g. a direct link of Tessy to the HW target or a simulated execution on the compiler provided CPU simulator (e.g. if provided by the Windriver Workbench). Running executables on the simulator during Algo X-Checks is an acceptable substitute in addition to unit tests on a x86 platform if the tests achieve C1 coverage. It is not acceptable to have only code execution with GNU GCC compiler which executes only on x86.
-	*Remark:
+	*Explanation: This means the SW Unit test has to be executed on a (simulated/real) target CPU environment under usage of the target compiler and the target compiler option set and settings. Acceptable for SW Unit testing is e.g. a direct link of Tessy to the HW target or a simulated execution on the compiler provided CPU simulator (e.g. if provided by the Windriver Workbench). Running executables on the simulator during Algo X-Checks is an acceptable substitute in addition to unit tests on a x86 platform if the tests achieve C1 coverage. It is not acceptable to have only code execution with GNU GCC compiler which executes only on x86.*
+	**Remark:**
 	
  - [ ] 268482: Each test case requires a description of all necessary inputs: pre-condition, test parameters and test data, description of the test event, expected results from which the decision pass/fail can be made. Each test case also requires a detailed instruction on how to execute the test.
-	*Remark:
+	**Remark:**
 	
  - [ ] 268556: All relevant requirements have to be linked to appropriate test cases. Relevant requirements are all planned requirements for the current sample or delivery. 
-	Explanation: It also means that the requirements have to have the quality of a requirement and have to be testable (e.g. no out of scope requirements| no 'test by review' requirements and no 'explanations' should be attempted to be tested).  Make sure that there are sufficient test cases to cover everything that is necessary. Ensure traceability by linking the test cases to the requirements. Observe that there are various tests and also reviews. Make sure to select the right one for each requirement.
-	*Remark:
+	*Explanation: It also means that the requirements have to have the quality of a requirement and have to be testable (e.g. no out of scope requirements| no 'test by review' requirements and no 'explanations' should be attempted to be tested).  Make sure that there are sufficient test cases to cover everything that is necessary. Ensure traceability by linking the test cases to the requirements. Observe that there are various tests and also reviews. Make sure to select the right one for each requirement.*
+	**Remark:**
 	
  - [ ] 268483: Test cases have to be specified by taking in consideration the SW Architecture and SW/Algo Design. Make sure to setup integration test cases for architecture topics and SW unit test cases for SW/Algo units.
-	*Remark:
+	**Remark:**
 	
  - [ ] 268143: Some test cases have to be defined to stress the functionality to at least the level of maximum realistic system usage.
-	Explanation: Worst case scenarios:
-	 * Inject simultaneously Front+Side+Rear crashes and measure runtime usage.
-	 * Communication: perform test cases for overloaded bus.
-	 * Satellite: full data communication between satellites and ECU at undervoltage/overvoltage thresholds.
-	*Remark:
+	**Remark:**
+	*Explanation: Worst case scenarios:
+	  - Inject simultaneously Front+Side+Rear crashes and measure runtime usage.
+	  - Communication: perform test cases for overloaded bus.
+	  - Satellite: full data communication between satellites and ECU at undervoltage/overvoltage thresholds.*
+	
 	
  - [ ] 268484: Sufficient tests have to be specified to verify that all variables are initialized correctly after warm reset and cold reset.
-	*Remark:
+	**Remark:**
 	
  - [ ] 268144: Tests have to be specified to verify that a functionality is not exceeding the defined runtime budget agreed with the SW Architect.
-	Explanation: For Algo this is not relevant, although it is recommended that Algo will check their runtime in non-formal way before integration.
-	*Remark:
+	*Explanation: For Algo this is not relevant, although it is recommended that Algo will check their runtime in non-formal way before integration.*
+	**Remark:**
 	
  - [ ] 268727: If test code or scripts are used, the test code has to be documented and put under version management for future reproduction of the test case.
-	*Remark:
+	**Remark:**
 	
  - [ ] 268223: For 3rd party SW acceptance tests have to be defined.
-	*Remark:
+	**Remark:**
 	
  - [ ] 268406: The contents of the test specification have to cover all aspects according to the related test method e.g. equivalence partitioning and boundary analysis| C1 coverage etc.
-	*Remark:
+	**Remark:**
 	
  - [ ] 268407: The test end criteria and completeness criteria for the test have to be specified.
-	Explanation: The test completeness criteria shall be described for every sample phase in the specific test activity (e.g. SW requirements test) for each test set (tested function) and for each test case (expected results). 
-	*Remark: 
+	*Explanation: The test completeness criteria shall be described for every sample phase in the specific test activity (e.g. SW requirements test) for each test set (tested function) and for each test case (expected results). *
+	**Remark:**
 	
  - [ ] 270172: Document here all additional findings which are not covered by any question in this review.
-	Explanation: e.g. project/product specific findings which are not covered by the checklist
-	*Remark:
+	*Explanation: e.g. project/product specific findings which are not covered by the checklist*
+	**Remark:**

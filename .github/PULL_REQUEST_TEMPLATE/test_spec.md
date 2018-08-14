@@ -2,17 +2,44 @@
 
 This document aims to be a community and process maintained and flexible guide to test script review.
 Best practice recommendations should come from the experience of script reviewers.
-Pylint result of the package containing the new script(s) must to be uploaded.
+Pylint result of the **package** containing the new script(s) must to be uploaded.
 
 ## Filling instructions
 
 It is mandatory to answer these questions at least by two reviewers (one tester and one developer) otherwise merge back to master must not be executed.
 Testers shall focus on script and ims test case related reviews, while developers shall focus on the pdf report.
-Remarking review tool questions is mandatory even if fulfilled!
+**Remarking review tool questions is mandatory** even if they are fulfilled!
+Some remarks are prefilled to fasten filling out.
 Otherwise:
-* if a question is not relevant (specially from process-side), then please remark it.
-* if a question is okay, please accept and remark may be added.
-* if a question is not okay, please leave it empty, and remark is mandatory.
+* if a question is fulfilled, please accept it and remark may be added.
+* if a question is not fulfilled, please leave it empty, and remark is mandatory with reviewer name
+
+### Examples
+
+#### Question is fulfilled
+
+- [X] Are all methods commented in a clear language?
+	Remark:
+	
+or
+
+- [X] Are all methods commented in a clear language?
+	Remark: [ughyg]: yes, they are easy to understand.  // [ughyg]: reviewer's user name
+	
+or (where "Remark" is in bold, there they are mandatory to be filled)
+
+- [X] 268727: If test code or scripts are used, the test code has to be documented and put under version management for future reproduction of the test case.
+	**Remark:** [ughyg]: Test script is part of the test package and is uploaded to git repository: <url_of_repo>
+	
+#### Question is not fulfilled (leave empty and remark)
+
+- [ ] Are all methods commented in a clear language?
+	Remark: [ughyg]: no, items: <list_of_methods, variables> purpose is not totally clear to me
+	
+#### Question is not relevant (accept and remark as not relevant)
+
+ - [X] 268223: For 3rd party SW acceptance tests have to be defined.
+	**Remark:** [ughyg]: not relevant, because not purpose of this test.
 
 
 ## Checklist
@@ -136,28 +163,28 @@ stays flexible, relevant and up to date.
 	*Explanation: It also means that the requirements have to have the quality of a requirement and have to be testable (e.g. no out of scope requirements| no 'test by review' requirements and no 'explanations' should be attempted to be tested).  Make sure that there are sufficient test cases to cover everything that is necessary. Ensure traceability by linking the test cases to the requirements. Observe that there are various tests and also reviews. Make sure to select the right one for each requirement.*
 	**Remark:**
 	
- - [ ] 268483: Test cases have to be specified by taking in consideration the SW Architecture and SW/Algo Design. Make sure to setup integration test cases for architecture topics and SW unit test cases for SW/Algo units.
-	**Remark:**
+ - [X] 268483: Test cases have to be specified by taking in consideration the SW Architecture and SW/Algo Design. Make sure to setup integration test cases for architecture topics and SW unit test cases for SW/Algo units.
+	**Remark:** [ughyg]: Not relevant, not purpose of this requirement test.
 	
- - [ ] 268143: Some test cases have to be defined to stress the functionality to at least the level of maximum realistic system usage.
+ - [X] 268143: Some test cases have to be defined to stress the functionality to at least the level of maximum realistic system usage.
 	*Explanation: Worst case scenarios:
 	  a) Inject simultaneously Front+Side+Rear crashes and measure runtime usage.
 	  b) Communication: perform test cases for overloaded bus.
 	  c) Satellite: full data communication between satellites and ECU at undervoltage/overvoltage thresholds.*
-	**Remark:**
+	**Remark:** [ughyg]: Not relevant, not purpose of this requirement test.
 	
- - [ ] 268484: Sufficient tests have to be specified to verify that all variables are initialized correctly after warm reset and cold reset.
-	**Remark:**
+ - [X] 268484: Sufficient tests have to be specified to verify that all variables are initialized correctly after warm reset and cold reset.
+	**Remark:** [ughyg]: Not relevant, not purpose of this requirement test.
 	
- - [ ] 268144: Tests have to be specified to verify that a functionality is not exceeding the defined runtime budget agreed with the SW Architect.
+ - [X] 268144: Tests have to be specified to verify that a functionality is not exceeding the defined runtime budget agreed with the SW Architect.
 	*Explanation: For Algo this is not relevant, although it is recommended that Algo will check their runtime in non-formal way before integration.*
-	**Remark:**
+	**Remark:** [ughyg]: Not relevant, not purpose of this requirement test.
 	
  - [ ] 268727: If test code or scripts are used, the test code has to be documented and put under version management for future reproduction of the test case.
-	**Remark:**
+	**Remark:** 
 	
- - [ ] 268223: For 3rd party SW acceptance tests have to be defined.
-	**Remark:**
+ - [X] 268223: For 3rd party SW acceptance tests have to be defined.
+	**Remark:** [ughyg]: Not relevant, not purpose of this requirement test.
 	
  - [ ] 268406: The contents of the test specification have to cover all aspects according to the related test method e.g. equivalence partitioning and boundary analysis, C1 coverage etc.
 	**Remark:**

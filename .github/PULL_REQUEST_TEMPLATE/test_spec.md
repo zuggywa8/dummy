@@ -8,39 +8,16 @@ Pylint result of the **package** containing the new script(s) must to be uploade
 
 It is mandatory to answer these questions at least by two reviewers (one tester and one developer) otherwise merge back to master must not be executed.
 Testers shall focus on script and ims test case related reviews, while developers shall focus on the pdf report.
-**Remarking review tool questions is mandatory** even if they are fulfilled!
-Some remarks are prefilled to fasten filling out.
-Otherwise:
-* if a question is fulfilled, please accept it and remark may be added.
-* if a question is not fulfilled, please leave it empty, and remark is mandatory with reviewer name
 
-### Examples
-
-#### Question is fulfilled
-
-- [X] Are all methods commented in a clear language?
-	Remark:
-	
-or
-
-- [X] Are all methods commented in a clear language?
-	Remark: [ughyg]: yes, they are easy to understand.  // [ughyg]: reviewer's user name
-	
-or (where "Remark" is in bold, there they are mandatory to be filled)
-
-- [X] 268727: If test code or scripts are used, the test code has to be documented and put under version management for future reproduction of the test case.
-	**Remark:** [ughyg]: Test script is part of the test package and is uploaded to git repository: <url_of_repo>
-	
-#### Question is not fulfilled (leave empty and remark)
-
-- [ ] Are all methods commented in a clear language?
-	Remark: [ughyg]: no, items: <list_of_methods, variables> purpose is not totally clear to me
-	
-#### Question is not relevant (accept and remark as not relevant)
-
- - [X] 268223: For 3rd party SW acceptance tests have to be defined.
-	**Remark:** [ughyg]: not relevant, because not purpose of this test.
-
+* if a question is fulfilled:
+	* accept it 
+	* add remark where "Remark" text is bold (there mandatory, elsewhere not)
+* if a question is not fulfilled
+	* leave it empty
+	* add remark
+* if a question is not relevant:
+	* accept it
+	* add remark why it is not relevant
 
 ## Checklist
 

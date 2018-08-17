@@ -1,1 +1,1 @@
-# dummy resetting to God?
+# dummy resetting to Gosh

@@ -1,1 +1,1 @@
-# dummy resetting?
+# dummy resetting to God?
